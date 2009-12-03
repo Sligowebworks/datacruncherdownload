@@ -1,0 +1,422 @@
+-- jdj: commenting out some that i think aren't used for download files
+--anything that joins to v_enrollment can pull columns from that
+--anything that joins to enrollment can be changed to v_enrollment???
+
+v_ACT
+OK
+
+v_Attendance
+OK
+
+v_Truancy
+OK
+
+v_Retention
+OK
+
+v_GradesEnrollFlat
+OK
+
+v_Dropouts
+OK
+
+v_Enrollment
+OK
+
+v_TeacherQualifications
+OK
+
+v_TeacherQualificationsScatterplot
+-- doesn't use racecode - uses separate columns for races instaed of one column 
+-- doesn't split out genders at all
+-- consult with jean for format?
+RaceLabel missing!!           
+SexLabel missing!!            
+StudentGroupLabel missing!! 
+
+v_AP_TESTS
+StudentGroupLabel missing!!
+
+v_EnrollFlatRaceSexGrades
+RaceLabel missing!!           
+SexLabel missing!!            
+StudentGroupLabel missing!! 
+
+v_Athletic_Conf 
+-- not really used? table instead?
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!! 
+
+Athletic_Conf
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!! 
+
+v_COURSE_OFFERINGS
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!    
+
+v_COURSE_YEAR
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!! 
+
+v_COURSEWORK
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!! 
+
+v_CurrentEducationCostPerMember
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!    
+
+v_EDISASIMILAR
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!! 
+
+v_ErateRollups
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!       
+
+
+--v_ErateRollupsWithSchooltype
+
+
+v_Expend
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!  
+
+v_Expend_2
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!   
+
+v_Expulsions
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+StudentGroupLabel missing!!  
+
+v_Grad_Reqs
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!   
+
+v_GroupsSelSchools
+agencykey missing!!           
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!      
+
+v_GroupsSelSchoolsEconStat
+agencykey missing!!           
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!     
+
+v_POST_GRAD_INTENT
+agencykey missing!!           
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!! 
+
+v_Revenues
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!   
+
+v_Revenues_2
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!       
+
+--v_Schools
+
+
+v_Staff
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!   
+
+v_Suspensions
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+StudentGroupLabel missing!! 
+
+v_SuspExpIncidents
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+StudentGroupLabel missing!!   
+YearFormatted missing!!     
+
+v_WKCESIMILAR
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!   
+
+v_WRCT
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!  
+
+v_WSAS
+charter missing!!             
+RaceLabel missing!!           
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!! 
+
+vAct
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+StudentGroupLabel missing!!   
+YearFormatted missing!!  
+
+vExpulsionServices
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!   
+
+vExpulsionServicesAndReturns
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!   
+
+vLEPGroupsDistrict
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!  
+
+vLEPGroupsDistrictDistSumm
+agencykey missing!!           
+CESA missing!!                
+charter missing!!             
+District Name missing!!       
+District Number missing!!     
+RaceLabel missing!!           
+School Name missing!!         
+School Number missing!!       
+schooltype missing!!          
+SexLabel missing!!            
+StudentGroupLabel missing!!   
+YearFormatted missing!!    
+
+
+

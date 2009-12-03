@@ -1,0 +1,24 @@
+Download Files Data Crunchers - file creation
+
+batch generation query - e.g., DownloadFilesCrunchersFilenameMorphX.sql:
+change three @ variables
+search for previous dataset name - double-check
+paste into new .cmd
+
+DTS source query - e.g., RetentionDataCrunch20041220c.sql
+referencing debug=3 in pages:
+check/change dataset-specific fields 
+check/change dataset-specific enrollment - K-12, PreK-12, etc. 
+check/change schooltype gradecodes - 70/71/72/73
+check/change all students gradecode - 98 vs 99
+redefine destination from source, re-map transformations
+
+
+Download Files Data Crunchers - deployment 
+
+per permission notes
+
+script debugging
+
+urlscan.ini
+

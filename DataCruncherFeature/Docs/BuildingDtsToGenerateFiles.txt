@@ -1,0 +1,28 @@
+building Download Options file generation DTS:
+
+check your windows login - be sure to log in on the Sligo domain at admin-level
+
+fails parse test in DTS "Transform Data Task" source dialog:
+
+--> changes with each
+--from v_EnrollFlatWWoDis 
+from v_Disabilities2 
+
+passes:
+
+--> changes with each
+from v_Disabilities2 
+
+no text at top of sql query
+
+first, write query output to filename TempFileOutput.csv
+
+create gloabal parametrs if necessary - 
+right click blank area in dts, 
+first is @Year
+second is @CESA
+
+then check correct sequence of parameters in DTS "Transform Data Task" source dialog
+
+then click destination, populate, execute
+

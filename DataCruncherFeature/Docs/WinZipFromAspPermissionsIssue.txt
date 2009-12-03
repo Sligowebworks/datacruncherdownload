@@ -1,0 +1,110 @@
+X-Info: This message was accepted for relay by 
+        smtp02.mrf.mail.rcn.net as the sender used SMTP authentication 
+X-Trace: fWbJgnD4MuMVRJNLgiHplvYp8X4S1xogChmJmVRukM0ank6YDJW8kQ== 
+Date: Thu, 09 Dec 2004 15:05:02 -0500 
+From: Michael Z Daryabeygi <mzd@sligowebworks.com> 
+User-Agent: Mozilla Thunderbird 0.7.3 (Windows/20040803) 
+X-Accept-Language: en-us, en 
+To: Jim Johnson <jdj@sligowebworks.com> 
+Subject: [Fwd: Re: #3057 WinZip Support Question] 
+X-AntiSpam: Checked for restricted content by Gordano's AntiSpam Software 
+
+
+
+Received: from [206.105.19.45] by mail.sligowebworks.com (GMS
+ 10.00.3213/NU7206.00.7ee04d92) with ESMTP id nztkdaaa for
+ mzd@sligowebworks.com; Wed, 8 Dec 2004 12:00:28 -0500
+Received: from [masked] by WZMAIL.winzip.com (GMS 8.01.3088/NT9969.00.8e0837c0) with ESMTP id luygofaa for mzd@sligowebworks.com; Wed, 8 Dec 2004 12:00:26 -0500
+Date: Wed, 08 Dec 2004 12:00:23 -0500
+From: WinZip Computing <help@winzip.com>
+To: mzd@sligowebworks.com
+X-Mailer: Blat v2.2.2, a Win32 SMTP/NNTP mailer http://www.blat.net
+Message-ID: <01c4dd47$Blat.v2.2.2$6958997a@winzip.com>
+Subject: RE:#3057 WinZip Support Question
+Content-Transfer-Encoding: 7BIT
+Content-Type: text/plain; charset=ISO-8859-1
+X-AntiSpam: Checked for restricted content by Gordano's AntiSpam Software
+
+
+Hi, I am writing in response to your message:
+
+
+> Name: Michael Daryabeygi
+> From: mzd@sligowebworks.com
+> Reproducible: Always
+> Occurs With: All files
+> WinZip Version: 9.0 SR-1
+> Windows Version: Windows 2000
+> Description:
+>
+> I am using your command-line add on as well as WZIPSE32.exe.  I have a
+> vbs script that creates a zip archive and then turns it into a
+> self-extractor.  It works great from a command prompt.  But this is not
+> how it is needed to be called.  My vbs is called in an ASP page.  But
+> the script only gets as far as creating the zip and starting
+> WZIPSE32.exe.  Then it just sits there.  Does not consume CPU, does not
+> exit on its own.  I have wracked my brain and banged my head to check
+> for permissions problems including in IIS.  I am at a complete loss.
+> What is different between the command line and IIS besides the
+> permissions and why does winzip work but not the self-extractor?  I have
+> a fully licensed version of winzip and the self-extractor exe.
+>
+
+
+
+In this case, it's likely that WinZip and the self-extractor application
+is not being recognized as 'registered' under the account from which the
+application is launched.
+
+
+The reason is due to the fact that it checks HKEY_CURRENT_USER\Software\Nico
+Mak Computing\WinZip Self-Extractor\Ver. to see if it exists and is the same
+version as the one being run. If it does not exist or is the wrong version,
+it goes through the one time install which checks to see if you want it to
+be the WinZip self-extractor app, AND it displays the license agreement. The
+reason is that it is a per user license not a per machine license.
+
+
+The VB script may run from the 'system' account.
+
+
+The simplest solution is to alter the account used by the process.
+Using the 'administrator' account not only corrects the problem with
+WinZip, but also has more permissions than the system account.
+
+
+If this is not an option, you'll need to 'manually' log in as the system
+account.
+
+
+To make it work, you can schedule this:
+
+
+at <now + 1 minute> /interactive cmd.exe /k
+(from the Microsoft Knowledge Base Q142040)
+
+
+When the command prompt window opens, you can manually execute WinZip
+and the self-extractor and register for the logged in user.
+
+
+When using WinZip Self-Extractor's command line on a remote system,
+execution can get hung up by a dialog box that appears the first time
+for each new user asking for them to agree to the license agreement.  If
+there is no convenient way to access the remote machine and dismiss the
+dialog box then it can be bypassed by creating a text file called
+winzipse.ini containing the following text:
+
+
+        [WinZipSE]
+        Version=2.2
+
+
+This file should be placed in the same folder as WinZip Self Extractor's
+program files.
+
+
+Please let me know if you have any questions.
+
+
+     -- Chuck Campbell, WinZip Technical Support

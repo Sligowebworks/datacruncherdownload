@@ -1,0 +1,3 @@
+rem requires wc utility
+
+for %z in (*.csv) do wc -l %z | sort >> LineCount.txt

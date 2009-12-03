@@ -1,0 +1,111 @@
+3:30 PM 11/28/2006
+
+retention 
+site - 04
+dnl - 04
+
+ACT 
+site - 06
+x dnl - 05!
+
+AP  
+site - 05
+x dnl - 03!
+
+HSC  
+site - 05
+dnl - 05
+
+postgrad intent 
+site - 05
+dnl - 05
+
+activities offered 
+site - 05
+x dnl - 04!
+
+grad reqs 
+site - 05
+x dnl - 04!
+
+courses 
+site - 05
+x dnl - 04!
+
+staff 
+site - 05
+dnl - 05
+
+TQ 
+site - 06
+dnl - 05!
+
+money 
+site - 05
+x dnl - 04!
+
+attendance 
+site - 05
+dnl - 05
+
+truancy 
+site - 05
+x dnl - 04!
+
+activities partic 
+site - 05
+x dnl - 04!
+
+courses taken 
+site - 05
+x dnl - 04!
+
+susp/exp - perc 
+site - 05
+x dnl - 04!
+
+susp/exp - days lost 
+site - 04 (page/attendance update)
+dnl - 04
+
+susp/exp - incidents 
+site - 05
+x dnl - 04!
+
+post-exp - services 
+site - 05
+x dnl - 04!
+
+dropouts 
+site - 05
+dnl - 05
+
+enrollment - gender 
+site - 06
+dnl - 06
+
+enrollment - race 
+site - 06
+dnl - 06
+
+enrollment - disability 
+site - 06
+dnl - 06
+
+enrollment - econ 
+site - 06
+x dnl - 05!
+
+enrollment - ELP 
+site - 04
+dnl - 05 - !?!?
+
+enrollment - grade 
+site - 06
+dnl - 06
+
+primary disabilities 
+site - 06
+dnl - 06
+
+

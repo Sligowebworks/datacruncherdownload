@@ -1,0 +1,42 @@
+Website Root (probably 'online') -- %wwwroot%
+
+***Copy wscript.exe from system32 to %wwwroot%\bin
+
+In %wwwroot%\bin\instalfiles:
+
+*** run winzip90.exe
+when prompted, Instal to %wwwroot%\bin\WinZip
+Select "Start With WinZip Classic"
+
+***Open WinZip, under help, select "Enter Registration Code"
+get license info from file ending in .license.txt
+
+*** Under Options, configuration, folders tab, for "Temp Folder" field enter:
+%wwwroot%\data\DataDownload\Zips\
+
+***run wzcline.exe
+to instal the command line support add-on to winzip
+
+***run Self-Extractor instal -- wzipse22.exe
+again, to %wwwroot%\bin\WinZip Self-Extractor
+(if you are copying files from another server, you have to 
+delete \\marge\D\WisconsinWebSite\online\bin\WinZip Self-Extractor and re-create it from the install; 
+otherwise you won't the "Enter Registration Code" prompt in the next step.)
+
+***Start SE
+Click on "Enter Registration Code."
+Look in the same license.txt file only further down, you will se the SE license info.
+You can then exit the dialogue.
+Copy the file winzipse.ini from this instal folder
+and place it in the folder where you instaled SE.
+This will enable the system user to access WinZipSE from ASP
+
+
+*** other notes:
+if copying from another server, probably best to clean out any remaining Zips 
+from \\marge\D\WisconsinWebSite\online\data\DataDownload\Zips....
+
+can test things out with \\marge\D\WisconsinWebSite\online\data\DataDownload\Docs\TestZipScript.vbs
+
+Permissions issues? see \\Sligofileserver\F\CLIENTS\Wisconsin\DataDownloadFeature\Docs\WinZipFromAspPermissionsIssue.txt
+

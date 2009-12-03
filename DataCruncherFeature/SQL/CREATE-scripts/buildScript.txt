@@ -1,0 +1,64 @@
+echo -- WIDownloadFiles database build > Rebuild.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.glsCategories.sql  >> Rebuild.sql
+type CREATE.table.glsCategories.sql >> Rebuild.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.glsCESAs.sql
+type CREATE.table.glsCESAs.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.glsDTSs.sql
+type CREATE.table.glsDTSs.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.glsQuestions.sql
+type CREATE.table.glsQuestions.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.glsQuestSubDivs.sql
+type CREATE.table.glsQuestSubDivs.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.glsSections.sql
+type CREATE.table.glsSections.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.glsYears.sql
+type CREATE.table.glsYears.sql
+echo -- 
+echo -- 
+echo -- CREATE.View.vQuestsJoinSubDivs.sql
+type CREATE.View.vQuestsJoinSubDivs.sql
+echo -- 
+echo -- 
+echo -- CREATE.View.v_Questions.sql
+type CREATE.View.v_Questions.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.tblDataSets.sql
+type CREATE.table.tblDataSets.sql
+echo -- 
+echo -- 
+echo -- CREATE.View.vDataSets.sql
+type CREATE.View.vDataSets.sql
+echo -- 
+echo -- 
+echo -- CREATE.table.logDownloadFiles.sql
+type CREATE.table.logDownloadFiles.sql
+echo -- 
+echo -- 
+echo -- CREATE.FUNCTION.WIDPICleanFileName.sql
+type CREATE.FUNCTION.WIDPICleanFileName.sql
+echo -- 
+echo -- 
+echo -- CREATE.PROCEDURE.GetDownloadFilenames.sql
+type CREATE.PROCEDURE.GetDownloadFilenames.sql
+echo -- 
+echo -- 
+echo -- CREATE.PROCEDURE.NewZipFile.sql
+type CREATE.PROCEDURE.NewZipFile.sql
+echo -- 
+echo -- should be done now
+

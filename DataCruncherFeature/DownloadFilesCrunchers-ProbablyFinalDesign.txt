@@ -1,0 +1,104 @@
+X-Sender: jdj@pooky.zilch.net 
+X-Mailer: QUALCOMM Windows Eudora Version 5.2.0.9 
+Date: Mon, 19 May 2003 11:20:39 -0400 
+To: "mzd@sligowebworks.com " <mzd@sligowebworks.com>, 
+   "Huong Cao Tran" <huong@sligowebworks.com>, 
+   "JDJ@sligowebworks.com" <JDJ@sligowebworks.com>, 
+   "Bill Brockschmidt  " <bill@sligowebworks.com> 
+From: Jim Johnson <jdj@sligowebworks.com> 
+Subject: Wisconsin - summary of the data crunchers download feature 
+X-Spam-Checker-Version: SpamAssassin 2.53 (1.174.2.15-2003-03-30-exp) 
+
+I also spoke with Jean about this.....be sure to read down to the very bottom, there are more specifics there.... 
+
+
+Number of files:
+2912 files - 8x13x28
+- 7 years + 1 with all years
+- 12 CESA + 1 with all CESAs
+- 27 questions + 1 with all questions (one of the 28 questions is not a data question - see below)
+
+
+Format of files - each file contains:
+
+Agency info     1       Year
+                2       Org Level 
+                3       CESA
+                4       District Name
+                5       District Number
+                6       School Name
+                7       School Number
+                8       School Type
+                9       Agency Type
+                10      Agency Key
+Student info    11      Grade
+                12      Mobility Status (FAY or Not) (will be empty for all non-WKCE files for now)
+                13      Student Group #1 (note: can use race/gender instead of student group, if cheaper)
+                14      Student Group #2
+
+
+Each file will have additional "Topic info" columns specific to that question - these should be obvious but we will check with Jean on these as we go along. 
+
+Example - Attendance:
+
+Topic info      15      Enrollment 
+                16      Actual Days of Attendance
+                17      Possible Days of Attendance
+                18      Attendance Rate
+
+
+- the FAY column - #12 - will be broken out for WKCE only - for now - 
+
+- the "all" option can be done with file bundling, not all one big file necessarily
+
+- any rate that is shown on a page should be included in the data cruncher's version
+
+- can use race/gender instead of student group, if cheaper
+
+- add schooltype, charter schools, agency key?
+
+
+Concept for file selection web page: see \\Sligofileserver\F\CLIENTS\Wisconsin\DownloadFilesForDataCrunchers.xls
+
+
+List of data questions:
+
+        How did students perform on the state reading test at grade 3?  
+        How did students perform on state tests at grades 4, 8, and 10? 
+        How did performance of all students enrolled compare to continuing students only?       
+        How did performance of my school compare to other schools statewide?    
+        How many students were not tested on statewide tests and why?
+        What percent of students did not advance to the next grade level?
+        How did students perform on college admissions and placement tests?
+        What are the graduation rates?
+        What are students' postgraduation plans?
+        What school-supported activities are offered?
+        What are the district requirements for high school graduation?
+        What advanced courses are offered?
+        What staff are available in this district?
+        What are the qualifications of teachers?
+        How much money is received and spent in this district?
+        Where can I find more detailed school finance data? --> not a data question             
+        What percent of students attend school each day?
+        What percent of students are habitually truant?
+        Do students participate in school supported activities?
+        What courses are students taking?
+        What percentage of students were suspended or expelled last year?
+        What percentage of school days were lost due to suspension or expulsion?
+        What types of incidents resulted in suspensions or expulsions?
+        What happens after students are expelled?
+        How many students dropped out of school last year?
+        What is the enrollment by student group?
+        What are the primary disabilities of students in need of special education services?
+        What are the characteristics of limited English proficient students at this school?
+
+
+
+
+
+========================================
+Jim Johnson ---- Sligo Computer Services, Inc. 
+jdj@sligowebworks.com - http://www.sligowebworks.com 
+301-270-9673 x302 ---- 301-270-9672 fax 
+
+

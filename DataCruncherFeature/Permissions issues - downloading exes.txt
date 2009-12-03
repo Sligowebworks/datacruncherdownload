@@ -1,0 +1,28 @@
+You can use IIS lockdown with URLScan. You will have to
+reconfigure the urlscan.* file to permit download of *.exe's for download of
+the client. Also, you will need to adjust the NTFS permissions on the sta
+directory to permit write and the nfuse icon directory as well. Typically,
+there is a deny write to web anonymous and web applications (I think) after
+running iislockdown. You will have to disable the permission inheritence.
+From IIS administrator, you will want to disable execute access to the Icon
+directory and only allow access to the sta directory from the local (to the
+server) IP addresses. 
+
+
+Double check that you do not permit Execute in the MMC in the SCRIPTS VD 
+or Folder.
+Try this.
+Create a new VD.
+Map it to a folder with only one .EXE
+Set the VD Application Settings (IIS4) or Excute permissions (IIS5) to 
+None.
+Access the VD from browser using with the filename.exe as the last item 
+in the url.
+This will work.
+The error you are getting means that it is clearly a permissions issue.
+
+
+
+lockdown ini - check for broken css or js breaking fonts
+
+document

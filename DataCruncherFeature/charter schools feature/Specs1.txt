@@ -1,0 +1,93 @@
+From: "Whitcomb, Jean   DPI" <Jean.Whitcomb@dpi.state.wi.us> 
+To: ''Jim Johnson' ' <jdj@sligowebworks.com> 
+Subject: RE: Download Options - Charter Specs 
+Date: Wed, 12 Jan 2005 12:31:29 -0600 
+X-Mailer: Internet Mail Service (5.5.2656.59) 
+X-AntiSpam: Checked for restricted content by Gordano's AntiSpam Software 
+
+
+See attached.  People in Charter Schools Programs here have money and they
+like the fact there is a "charter" field in the download files but don't
+like the fact that assessment data (especially the WKCE/WSAS 4, 8, 10) data
+are not available in the same way.  
+
+
+The purpose of this enhancement would be to provide download options and
+download data on this page for WSAS like those available for other questions
+on WINSS.  
+
+
+-- design for charter, non-charter, both
+-- estimate $$, not hours
+
+start to pitch work for grades 3-8 - avoid "rewrite?" - but still must rebuild everything - just bury the re-write in this....how support grades 3-8 in the pages? it's still a re-write....
+
+
+At 12:30 PM 1/27/2005, Whitcomb, Jean   DPI wrote:
+
+If I can get a rough estimate on the WSAS download options checkboxes per
+specs I sent then that would be good.  Just ball park +/- a couple of
+thousand dollars would be good.   Would that be hard to do?  We can get more
+precise later but I need to get back to people on this. 
+
+
+
+How did students perform on state tests at grades 4, 8, and 10?
+
+How did students perform on the state reading test at grade 3?
+
+How did performance of all students in my school compare to performance of continuing students only?
+
+
+itemize every column name for every page, and every topic column
+specify grade ranges under grade_label (4,8,10 only)
+no schooltypes, no charter
+student groups are in rows instead of columns
+WSAS: WKCE and WAA Combined vs. WKCE Only - two separate files
+similar schools - no?
+no private schools except for Milwaukee partnership schools?
+WRCT? 
+Continuing students? OK to combine with 
+105 records per school/district - 99225 rows for CESA 01
+
+no page links?
+
+-----Original Message-----
+From: Whitcomb, Jean   DPI
+To: 'Jim Johnson '; Whitcomb, Jean   DPI
+Cc: 'mzd@sligowebworks.com '
+Sent: 1/26/2005 10:20 PM
+Subject: RE: Download Options - To Do List? #6
+
+I just checked this.  I don't get "Page cannot be displayed" any more
+but I think what I get now is worse.   Instead I get a message that I
+can only select 3 boxes per variable.  This will be very frustrating
+because a lot of users will want all CESAs for a single year and a
+single question (statewide data), and other users will want all years
+for a single question.  Was better the way it was before.  Is there
+another alternative?  
+
+PS.  I have a meeting with special ed on Friday about status.  I also
+have to get back to folks who want an estimate on the download options
+for WSAS stuff (what I sent a few days back).  Just so you know.  How
+long do you think before we can get going on special ed stuff (assuming
+I can get back to you on remaining download options stuff this weekend)?
+How long until I can get an estimate about the other project? 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+6) Page cannot be displayed.  I still get this message.  Seems to happen
+mainly when the number of files being generated is large.  
+
+
+Michael's working on this now, should be done tonight or tomorrow....
+
+
+
+7 
+
+========================================
+Jim Johnson ---- Sligo Computer Services, Inc. 
+jdj@sligowebworks.com - http://www.sligowebworks.com 
+301-270-9673 x302 ---- 301-270-9672 fax 
+

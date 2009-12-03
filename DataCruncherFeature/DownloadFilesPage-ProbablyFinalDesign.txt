@@ -1,0 +1,58 @@
+X-Sender: jdj@pooky.zilch.net 
+X-Mailer: QUALCOMM Windows Eudora Version 5.2.0.9 
+Date: Mon, 19 May 2003 11:10:54 -0400 
+To: "mzd@sligowebworks.com " <mzd@sligowebworks.com>, 
+   "Bill Brockschmidt  " <bill@sligowebworks.com>, 
+   "Huong Cao Tran" <huong@sligowebworks.com>, 
+   "JDJ@sligowebworks.com" <JDJ@sligowebworks.com> 
+From: Jim Johnson <jdj@sligowebworks.com> 
+Subject: Wisconsin - summary of the "download files" link (the 
+  simple/light users download feature) 
+X-Spam-Checker-Version: SpamAssassin 2.53 (1.174.2.15-2003-03-30-exp) 
+
+I had a long talk with Jean on Friday about this.....be sure to read down to the very bottom, there are more specifics there....
+
+For the light users:
+- A "download raw data from this page" link on each page. When the user clicks on it, they're prompted with a standard save-file dialog box. 
+- The file is in comma-separated value (CSV) format, which opens into Excel by default and is also easily import-able into any database program. 
+- The file contains a friendly version of the data showing in the table on the page - it has additional labels (where necessary) giving district and school names and numbers, so that it will be clear what each row of data is when viewed off-page, e.g., within a spreadsheet. 
+- Suppression, aggregations, etc. are all included. 
+- It's a small file that contains only data specific to particular view of that page - e.g., if the user wants both gender and race comparisons, they do two different downloads for the two different views of the data. 
+- Since the data being downloaded are relatively small, this could all be done in real-time with no need for pre-processed files or restricted download times. 
+- The link could go below the table on each page, or anywhere we want. 
+- The advantage is that it's fast and friendly - but serious data crunchers will want the next feature... 
+
+preferred order of columns:
+
+cesa number
+district number
+school number
+district name 
+school name 
+year 
+subject name (if any)
+male/female (if any)
+race (if any)
+enrollment (if any)
+then remaining data columns - in the same order as what appears in the table
+
+
+[similar to data crunchers format except put names near data]
+
+
+if cheap and easy, include these columns: 
+
+schooltype
+charter schools 
+agency key
+
+
+
+
+
+========================================
+Jim Johnson ---- Sligo Computer Services, Inc. 
+jdj@sligowebworks.com - http://www.sligowebworks.com 
+301-270-9673 x302 ---- 301-270-9672 fax 
+
+

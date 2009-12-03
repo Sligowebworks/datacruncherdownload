@@ -1,0 +1,51 @@
+the "download files" link option:
+
+preferred order of columns:
+
+cesa number
+district number
+school number
+district name 
+school name 
+year 
+subject name (if any)
+male/female (if any)
+race (if any)
+enrollment (if any)
+then remaining data columns - in the same order as what appears in the table
+
+
+[similar to data crunchers format except put names near data]
+
+
+if cheap and easy, include: 
+
+schooltype
+charter schools 
+agency key
+
+
+
+
+the data crunchers version: 
+
+the "all" option can be done with file bundling, not all one big file necessarily
+
+data crunchers version: any rate that is shown on a page should be included in the data cruncher's version
+
+data crunchers version: can use race/gender instead of student group, if cheaper
+
+data crunchers version: add schooltype, charter schools, agency key?
+
+
+
+
+other notes:
+
+DPI distributes the SPR (Report Card) task by making data available to locals and letting them handle the rest
+
+posting new WKCE results is most important - NCLB
+
+keep tight track of budget - things may get dicey with what the feds require
+
+

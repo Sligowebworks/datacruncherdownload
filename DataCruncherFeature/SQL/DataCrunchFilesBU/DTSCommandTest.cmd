@@ -1,0 +1,13 @@
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=01"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=02"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=03"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=04"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=05"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=06"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=07"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=08"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=09"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=10"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=11"
+DTSRun /S "bart" /U "sa" /P "bytes4us" /N "DataCrunchRetention9" /M "bytes4us" /A "@Year:8=2003" /A "@CESA:8=12"
+for %%z in (*.csv) do wc -l %%z | sort 
