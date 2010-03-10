@@ -1,0 +1,494 @@
+<html lang="en-us"><head><link title="Microsoft Support Search" type="application/opensearchdescription+xml" rel="search" href="/common/opensearchdescriptor.aspx?ln=en-us" /><meta name="DCSext.sup_cid" content="890775" /><meta name="DCSext.sup_cln" content="en-us" /><meta name="DCSext.sup_ct" content="kb" /><meta name="DCSext.sup_ln" content="en-us" /><meta name="DCSext.sup_sd" content="gn" /><script type="text/javascript" src="/common/script/gsfx/jquery-1.2.6.js"></script><script type="text/javascript" src="/common/script/gsfx/default.js?28"></script><script type="text/javascript">setcookieval("gssSITE","gn",'',true);</script><script type="text/javascript">setcookieval("gssTHEME","gn",'',true);</script><script type="text/javascript">setcookieval("gssTOOLBAR","gn",'',true);</script><script type="text/javascript">var g_currentContent='kb\x3ben-us\x3b890775';</script><script type="text/javascript" src="/common/script/fx/survey.js?28"></script><meta name="robots" content="noarchive" /><meta name="Search.Assets" content="1" /><meta name="Search.Description" content="Describes&#32;how&#32;to&#32;enable&#32;non-sysadmin&#32;accounts&#32;to&#32;execute&#32;&#34;xp_cmdshell&#34;&#32;in&#32;SQL&#32;Server&#32;2000." /><meta name="Search.QueryWords" content="SQL2000" /><meta name="Search.DateModified" content="2008-06-02T17&#58;39&#58;42" /><meta name="Search.scid" content="kb&#59;en-us&#59;890775" /><meta name="Search.Title" content="How&#32;to&#32;enable&#32;non-sysadmin&#32;accounts&#32;to&#32;execute&#32;the&#32;&#34;xp_cmdshell&#34;&#32;extended&#32;stored&#32;procedure&#32;in&#32;SQL&#32;Server&#32;2000" /><meta name="Search.Products" content="36503" /><meta name="Search.KBParents" content="5407&#32;2852&#32;1044" /><meta name="KBParents" content="5407&#32;2852&#32;1044" /><meta name="Search.Audiences" content="kbAudDeveloper&#32;&#32;kbAudITPRO" /><meta name="Search.ContentType" content="kb" /><meta name="Search.Retire" content="0" /><meta name="Search.ContentID" content="890775" /><meta name="Search.KeyWords" content="kbinfo&#32;kbhowto&#32;KB890775" /><meta name="Search.MT" content="0" /><meta name="Search.KB3" content="0" /><meta name="Keywords" content="kbinfo kbhowto KB890775" /><meta name="Description" content="Describes&#32;how&#32;to&#32;enable&#32;non-sysadmin&#32;accounts&#32;to&#32;execute&#32;&#34;xp_cmdshell&#34;&#32;in&#32;SQL&#32;Server&#32;2000." /><meta name="MS.LOCALE" content="en" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><script type="text/javascript" src="/common/script/gsfx/search.js?28"></script><script type="text/javascript" src="http://autocomplete.support.microsoft.com/script/ac.js?28"></script><script type="text/javascript">var gCookieDomain='';</script><title>How to enable non-sysadmin accounts to execute the &#34;xp_cmdshell&#34; extended stored procedure in SQL Server 2000</title><XMLREADER><link rel="stylesheet" type="text/css" href="/common/css/default/default.css?28" /><link rel="stylesheet" type="text/css" href="/common/css/default/XmlContent.css?28" /><script type="text/javascript" src="/common/script/gsfx/kb.js?28"></script><script type="text/javascript" src="/common/script/gsfx/stickypanel.js?28"></script><link rel="stylesheet" type="text/css" href="/common/css/default/stickypanel.css?28" /><link rel="stylesheet" type="text/css" href="/common/css/default/branding.css?28" /></XMLREADER>
+<!-- RESG: 3/9/2010 3:59:10 PM - RESX: 1/1/0001 12:00:00 AM -->
+<!-- (c) 2010 Microsoft Corporation. All Rights Reserved -->
+<style type="text/css">html body, html select, html input, html form, html textarea{font-family : Verdana, Arial, Helvetica, Sans-Serif;}</style><script type="text/javascript">var PersonalizationInfo='a2I4OTA3NzUIZW4tdXMISG93IHRvIGVuYWJsZSBub24tc3lzYWRtaW4_';</script><link rel="stylesheet" type="text/css" href="/common/css/fx/surveytrigger.css?28" ><script type="text/javascript" src="/common/script/fx/surveycookieutil.js?28"></script><script type="text/javascript" src="/common/script/fx/surveytrigger.js?28"></script></head><body onload="thisLoad();" onunload="thisUnload();">
+<style type="text/css">  
+    body 
+    {
+        
+            background:url('/library/images/support/cn/parent_bkgnd.png') repeat-x #FFFFFF;
+        
+    }
+
+    
+    #gsfx_brnd_PageHeaderImage 
+    {
+        background:url('/library/images/support/cn/mso_energy.jpg') no-repeat top center;
+    }
+    
+    
+    #gsfx_brnd_SiteHeaderImage
+    {
+        height:0px;
+    }
+    
+    
+    
+    .gsfx_brnd_NetworkLink, .gsfx_brnd_NetworkLink:visited, .gsfx_brnd_NetworkLink a, .gsfx_brnd_NetworkLink a:visited
+    {
+        color: #FFFFFF;
+    }
+    
+    .gsfx_brnd_NetworkLink:hover, .gsfx_brnd_NetworkLink:active, .gsfx_brnd_NetworkLink:focus, 
+    .gsfx_brnd_NetworkLink a:hover, .gsfx_brnd_NetworkLink a:active, .gsfx_brnd_NetworkLink a:focus
+    #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink:hover span, #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink:active span, #gsfx_brnd_NetworkFooter.gsfx_brnd_NetworkLink:focus span, 
+    #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink a:hover span, #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink a:active span, #gsfx_brnd_NetworkFooter .gsfx_brnd_NetworkLink a:focus span
+    {
+        color: #FE5815;
+        border-bottom-color: #FE5815;
+    }
+    
+    #gsfx_brnd_NetworkHeader, #gsfx_brnd_NetworkHeaderLinks
+    {
+        color: #ffffff;
+    }
+
+    #gsfx_brnd_SiteHeader, #gsfx_brnd_PageLogoWrapper, #gsfx_brnd_PageTitle, #gsfx_brnd_SearchWrapper a, #gsfx_bsrch_poweredbycell span
+    {
+        color: #ffffff;
+    }
+    
+    #gsfx_bsrch_catsel a, #gsfx_bsrch_catsel span
+    {
+        border-color: #ffffff;
+    }
+
+    #gsfx_brnd_SiteFooter, #gsfx_brnd_SiteFooterWrap
+    {
+        color: #398DCA;
+    }
+
+    #gsfx_brnd_NetworkFooter, #gsfx_brnd_FooterLinkContainer, #gsfx_brnd_FooterLinkContainer span, 
+    #gsfx_brnd_copyright_container, #gsfx_brnd_copyright_container span
+    {
+        color: #398DCA;
+    }
+        
+    
+    </style>
+<!--[if lte IE 6]>
+<style type="text/css">
+    #gsfx_brnd_PageHeaderImage {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/mso_energy.jpg', sizingMethod='image');}
+    #gsfx_brnd_SiteImgWedge {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale');}    
+    #gsfx_brnd_PageLogo {visibility:hidden;}
+    #gsfx_brnd_legacy_PageLogo {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='image');}
+    #gsfx_brnd_MSLogo {visibility:hidden;}
+    #gsfx_brnd_legacy_MSLogo {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/gsfx_brnd_ms_logo_sml_blk.png', sizingMethod='image');}
+</style>
+<![endif]-->
+
+
+<div id="gsfx_brnd_CenterContent">
+<div id="gsfx_brnd_PageWrapper">
+    <div id="gsfx_brnd_PageContainer">
+        <div id="gsfx_brnd_PageHeaderImage"></div>    
+        <div id="gsfx_brnd_HeaderContainer">
+            <div id="gsfx_brnd_NetworkHeader">
+                <div id="gsfx_brnd_CorpMarketingContainer" class="gsfx_brnd_NetworkLeft">
+                    <div id="gsfx_brnd_CorpMarketingSpace" class="gsfx_brnd_NetworkLeft">
+                        
+                        <div class="gsfx_brnd_NetworkLink">
+                        
+                          <img src="/library/images/support/en-us/gsfx_eie_icon_dkbg.png" />
+                        
+                        <span>
+                        <a href="http://clk.atdmt.com/MRT/go/163155872/direct/01/" id="L_191784">Upgrade your Internet Experience</a>
+                        </span>
+                        </div>
+                        <style type="text/css">
+                            #gsfx_brnd_CorpMarketingContainer
+                            {
+                                background : url('');
+                            }
+                            
+                            #gsfx_brnd_corpflyoutad_inner
+                            {
+                                width: 423;
+                                height: 133;
+                                background: url('/library/images/support/en-us/gsfx_corpflyoutad_background.png');
+                            }
+                            #gsfx_brnd_corpflyoutad_go
+                            {
+                                position: absolute;
+                                left: 313;
+                                top: 96;
+                            }
+                            
+                        </style>                                                
+                        <script type="text/javascript">
+                            var gsfx_brnd_ad_pushenddate;
+                            var gsfx_brnd_ad_pushstartdate;
+                            try
+                            {
+                                gsfx_brnd_ad_pushenddate = new Date('July 2, 2010');
+                                gsfx_brnd_ad_pushstartdate = new Date('August 3, 2009');
+                            }
+                            catch(e)
+                            {
+                                gsfx_brnd_ad_pushenddate = null;
+                                gsfx_brnd_ad_pushstartdate = null;
+                            }
+                        </script>
+                        <div id="gsfx_brnd_corpflyoutad">
+                            <div id="gsfx_brnd_corpflyoutad_inner">
+                                <a href="javascript:void(0);" id="gsfx_brnd_corpflyoutad_close">
+                                    <img src="/library/images/support/en-us/gsfx_corpflyoutad_btn_close.png" alt=""
+                                        onmouseover="this.src='/library/images/support/en-us/gsfx_corpflyoutad_btn_close_hover.png';" onmouseout="this.src='/library/images/support/en-us/gsfx_corpflyoutad_btn_close.png';"
+                                        onmousedown="this.src='/library/images/support/en-us/gsfx_corpflyoutad_btn_close_hover.png';" />
+                                </a><a href="http://clk.atdmt.com/MRT/go/163155872/direct/01/" id="gsfx_brnd_corpflyoutad_go">
+                                    <img src="/library/images/support/en-us/gsfx_corpflyoutad_go.png" alt=""
+                                        onmouseover="this.src='/library/images/support/en-us/gsfx_corpflyoutad_go_hover.png';" onmouseout="this.src='/library/images/support/en-us/gsfx_corpflyoutad_go.png';"
+                                        onmousedown="this.src='/library/images/support/en-us/gsfx_corpflyoutad_go_hover.png';" />
+                                </a><a href="javascript:void(0);" id="gsfx_brnd_corpflyoutad_dontshow">
+                                    
+                                    <span>
+                                        Don't show me this again
+                                    </span>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--Table is used here in order to properly order the links for LTR and RTL while maintaining the correct tab order-->
+                <table summary="Network Header Links" id="gsfx_brnd_NetworkHeaderLinks" class="gsfx_brnd_NetworkRight">
+                    <tr>
+                        <td class="gsfx_brnd_NetworkLinkContainer">
+                            <span id="gsfx_brnd_LocalName">
+                                United States
+                            </span>
+                        </td>
+                        <td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink">
+                            <a href="/common/international.aspx" id="L_153552">Change</a>
+                        </td>
+                        
+                        <td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_HeaderSeperator">|</td>
+                        
+                        <td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink">
+                            <a href="http://www.microsoft.com/en/us/sitemap.aspx" id="L_153551">All Microsoft Sites</a>
+                        </td>
+                        
+                        
+                    </tr>
+                </table>
+            </div>
+            <div id="gsfx_brnd_SiteHeader">            
+                <div id="gsfx_brnd_SiteHeaderImageContainer">
+                    <div id="gsfx_brnd_SiteHeaderImage">
+                    
+                    </div>
+                </div>
+                
+                <div id="gsfx_brnd_PageLogoWrapper" class="gsfx_brnd_NetworkLeft">
+                    <a id="gsfx_brnd_PageLogoLink" href="http://www.microsoft.com"></a>
+                    <span id="gsfx_brnd_PageTitle"><a href="/" style="color:white; text-decoration :none">Microsoft Support</a></span>
+                </div>
+                <div id="gsfx_brnd_SearchWrapper" class="gsfx_brnd_NetworkRight">
+                    
+<form id="frmsrch" action="/search/default.aspx" onsubmit="return SaveSimpleSearch();" method="get">
+    <style type="text/css">
+    #gsfx_cat_sel_ie6
+    {
+    	visibility:hidden;
+    }
+    </style>
+    <script type='text/javascript'>setACStartChars('4:');</script>    
+    <!--[if lte IE 6]>
+    <style type="text/css">
+    .gsfx_bsrch_container
+    {
+        background-image:none;
+    }
+    .gsfx_bsrch_container1
+    {
+        display:none;
+        position:absolute;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/ss_live_glass_border.png');
+    }
+    #gsfx_cat_sel
+    {
+        background-image:none;
+    }
+    #gsfx_cat_sel_ie6
+    {
+        position:absolute;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/ss_dd_select1.png');
+        visibility:visible;
+        width:12px;
+        height:24px;
+    }
+    </style>
+    <div id="gsfx_bsrch_bg_ie6" class="gsfx_bsrch_container gsfx_bsrch_container1" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/cn/ss_live_glass_border.png');"></div>
+<![endif]-->
+    <div id="gsfx_bsrch_bg" class="gsfx_bsrch_container">
+    <div id="gsfx_bsrch_divQuery" style="width:304px">
+        <input type="text" id="gsfx_bsrch_query" style="width:272px" name="query" maxlength="200" value="" class="siteseltxt" autocomplete="off" />
+        <!--span class="gsfx_bsrch_buttonwrap" id="gsfx_bsrch_websrch"-->
+            <!--input type="image" id="gsfx_bsrch_btnimg" onclick="submitSimpleSearch('http://www.bing.com/search?mkt=en-us&q=', $('#gsfx_bsrch_query').get(0).value);" /-->
+            <input type="image" alt="" class="gsfx_img_png" style="width: 20;height: 20;" src="/library/images/support/CN/ss_live_button.png" onclick="SaveSimpleSearch();" id="gsfx_bsrch_btnimg" /><!--[if lte IE 6]><input type="image" src="/library/images/support/cn/onepix.gif" alt="" class="gsfx_div_png" style="width:20px;height:20px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/CN/ss_live_button.png', sizingMethod='scale');" onclick="SaveSimpleSearch();" id="gsfx_bsrch_btnimg" /><![endif]-->
+            
+        <!--/span-->
+    </div>
+    
+    <div id="gsfx_cat_sel" onmouseover="ChangeBackground(this, true)" onmouseout="ChangeBackground(this, false)" onclick="ShowHideLangSel(event)" style="display:none">
+    <div id="gsfx_cat_sel_ie6" onmouseover="ChangeBackground(this, true)" onmouseout="ChangeBackground(this, false)" style="display:none"></div>
+    
+        
+                <input type="hidden" id="catalog" name="catalog" value="LCID=1033" />
+    
+
+    </div>
+    <div id="gsfx_bsrch_logo_div">
+    <img alt="" class="gsfx_img_png" style="width: 51;height: 17;" src="/library/images/support/CN/bing_logo_white.png" onclick="CallWebSearch('http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d','http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d');" id="gsfx_bsrch_logo" /><!--[if lte IE 6]><div alt="" class="gsfx_div_png" style="width:51px;height:17px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/CN/bing_logo_white.png', sizingMethod='scale');" onclick="CallWebSearch('http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d','http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d');" id="gsfx_bsrch_logo"></div><![endif]-->
+    </div>
+    <br />
+    </div>
+    <script type="text/javascript">try{MS.Support.AC.MakeAutoComplete({id:'gsfx_bsrch_query', lcid:'1033', acURL:'http://autocomplete.support.microsoft.com', statsObj:StatsDotNet, startChar:'4', bubbleside:'left'});}catch(e){}</script><script type='text/javascript'>supportedSites.push(new Site('Search Microsoft Support', '\x2fsearch\x2fdefault.aspx', true));supportedSites.push(new Site('Search Microsoft.com', 'http\x3a\x2f\x2fsearch.microsoft.com\x2fsearch\x2fresults.aspx\x3fview\x3den-us\x26qu\x3d', false));supportedSites.push(new Site('Search the web', 'http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fmkt\x3den-us\x26q\x3d', false));</script>
+    
+        <!--div id="gsfx_bsrch_poweredbycell" class="gsfx_brnd_NetworkTextRight">
+            
+        </div-->
+    
+        
+    <div class="hiddenformels">
+        <input type="hidden" name="mode" value="r" />
+    </div>
+    <noscript>
+        <style type="text/css">
+            #gsfx_bsrch_catsel a {display:none;} 
+            #gsfx_bsrch_websrch {display:none;}
+            #gsfx_bsrch_query{font-style:normal;color:Black;}
+        </style>
+        <!--[if lte IE 6]>
+        <style>
+        #gsfx_bsrch_bg_ie6{display:block;right:1px}
+        </style><![endif]-->
+    </noscript>
+</form>
+                </div>
+            </div>
+        </div>
+        <div id="gsfx_brnd_TopCorners" class="gsfx_brnd_CornerContainer">
+            <div class="gsfx_brnd_TBBorders gsfx_brnd_TransBG" id="gsfx_brnd_TopBorder">
+            </div>
+            <div class="gsfx_brnd_Corner" id="gsfx_brnd_LUpperCorner">
+            </div>
+        </div>
+        <div id="gsfx_brnd_LocalToolBar" class="gsfx_brnd_TransBG gsfx_brnd_SideBorder"><ul id="gsfx_brnd_LocalLinks"><li class="gsfx_brnd_LocalLink"><a href="/" id="L_153581"><span>Support Home</span></a></li><li class="gsfx_brnd_LocalSeperator">&nbsp;</li><li class="gsfx_brnd_LocalLink"><a href="/select/?target=hub" id="L_153582"><span>Solution Centers</span></a></li><li class="gsfx_brnd_LocalSeperator">&nbsp;</li><li class="gsfx_brnd_LocalLink"><a href="/search/?adv=1" id="L_153583"><span>Advanced Search</span></a></li><li class="gsfx_brnd_LocalSeperator">&nbsp;</li><li class="gsfx_brnd_LocalLink"><a href="http://store.microsoft.com/home.aspx?WT.mc_id=SupportSiteUS_buyproducts" id="L_195944"><span>Buy products</span></a></li></ul></div>
+        
+        <div id="gsfx_brnd_ToolbarShadow" class="gsfx_brnd_TransBG gsfx_brnd_SideBorder"><div id="gsfx_brnd_shadow"></div></div>
+        
+        <div id="gsfx_brnd_ContentContainer" class="gsfx_brnd_TransBG gsfx_brnd_SideBorder">
+            <div id="contentArea">            
+
+<div id="mainRow"><div class="primaryTable"><table cellpadding="0" cellspacing="0" class="primaryTable"><tr><td class="primaryMainColumn"><div id="mainColumn"><div id="kb" class="kb"><div id="kb_default" class="kb_default ltr"><!-- - -KB 3 start- - --><a id="top"></a><div class="articleProperty">Article ID: 890775 - Last Review: June 2, 2008 - Revision: 3.2</div><h1 class="title">How to enable non-sysadmin accounts to execute the "xp_cmdshell" extended stored procedure in SQL Server 2000</h1><div class="appliesToLink"><a href="#appliesto">View products that this article applies to.</a></div><script type="text/javascript">if (!loadTOCNode) {var loadTOCNode = function(){}}</script><div class="notice"></div><div id="kb_section" class="section"><h2 class="subTitle" id="tocTitle"><span><a href="javascript:void(0);">On This Page</a></span><div class="sectionpreview_closed"></div></h2><div class="sbody" id="tocDiv"></div><script type="text/javascript">
+            var sectionFilter = "type != 'notice' && type != 'securedata' && type != 'querywords'";
+            var tocArrow = "/library/images/support/kbgraphics/public/en-us/downarrow.gif";
+            var depthLimit = 10;
+            var depth3Limit = 10;
+            var depth4Limit = 5;
+            var depth5Limit = 3;
+            var tocEntryMinimum = 1;
+        </script><noscript><style>#tocTitle, #tocDiv{display: none;}</style></noscript><div id="kb_expandcollapseall" class="expandcollapseall"><a href="javascript:void(0);" class="expandalltext">Expand all</a> | <a href="javascript:void(0);" class="collapsealltext">Collapse all</a><script type="text/javascript">
+                    if (kb_page_object)
+                    {
+                    kb_page_object.kb_imageExpandHoverText = 'Click to expand this image';
+                    }
+                </script></div><h2 class="subTitle" id="tocHeadRef"><span><a href="javascript:void(0);">SUMMARY</a></span><div class="sectionpreview_closed"></div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'summary');
+                        </script><div class="sbody"><div class="indent"><i>This article describes how to configure a Microsoft Windows-level SQL
+		  Server Agent proxy account to be used by SQL logins that are not members of the
+		  <b>sysadmin</b> fixed server role. Additionally, the article contains references
+		  to more information to help you solve problems that may occur when you try to
+		  set up a proxy account.</i></div><div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div></div><h2 class="subTitle" id="tocHeadRef"><span><a href="javascript:void(0);">INTRODUCTION</a></span><div class="sectionpreview_closed"></div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'summary');
+                        </script><div class="sbody">The <b>xp_cmdshell</b> extended stored procedure invokes a Windows command shell from
+		  within Microsoft SQL Server 2000. When the <b>xp_cmdshell</b> extended stored procedure is executed by a member of the <b>sysadmin</b> fixed server role, the Windows process of the command shell runs
+		  with the security context of the Windows service account of SQL Server. For
+		  example, if SQL Server is running under a Windows logon that has administrative
+		  rights on the computer, the user who opens a command prompt with the <b>xp_cmdshell</b> extended stored procedure will receive access to Windows as a
+		  local administrator. By default, the permission to execute the <b>xp_cmdshell</b> extended stored procedure is granted only to members of the <b>sysadmin</b> fixed server role. This permission helps deter the escalation of
+		  rights.<br><br>When you want to start new Windows processes with a reduced
+		  level of rights, you can use the SQL Server Agent proxy account to configure a
+		  Windows account with the appropriate level of rights. <div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div></div><h2 class="subTitle" id="tocHeadRef"><span><a href="javascript:void(0);">MORE INFORMATION</a></span><div class="sectionpreview_closed"></div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'moreinformation');
+                        </script><div class="sbody">When you try to execute the <b>xp_cmdshell</b> extended stored procedure from a SQL Server login that is not a
+		  member of the <b>sysadmin</b> server role and the SQL Server Agent proxy account has not been
+		  set up correctly, you may receive error messages that are similar to the
+		  following:<div class="kb_errormsgbody"><div class="kb_errorcontent"><div class="errormsg">Msg 50001, Level 1, State 50001 <br>xpsql.cpp:
+		  Error 997 from GetProxyAccount on line 499 </div></div></div><div class="kb_errormsgbody"><div class="kb_errorcontent"><div class="errormsg">Msg
+		  50001, Level 1, State 50001 <br>xpsql.cpp: Error 317 from GetProxyAccount on
+		  line 499 </div></div></div><div class="kb_errormsgbody"><div class="kb_errorcontent"><div class="errormsg">Msg 50001, Level 1, State 50001
+		  <br>xpsql.cpp: Error 0 from GetProxyAccount on line 499 </div></div></div><div class="kb_errormsgbody"><div class="kb_errorcontent"><div class="errormsg">Msg 50001, Level 1, State 50001 <br>xpsql.cpp: Error 87 from
+		  GetProxyAccount on line 499 </div></div></div>If you have to let non-sysadmin users run the <b>xp_cmdshell</b> extended stored procedure in SQL Server 2000, you must configure the proxy account and the SQL Server startup account to be a member of the Local Administrators group. When SQL Server executes jobs or commands for users who are not members of the sysadmin fixed server role, the SQL Server Agent and the <b>xp_cmdshell</b> extended stored procedure use the proxy account. The Windows security credentials for the proxy account are stored in the Local Security Authority (LSA) Secrets database. Only Windows administrators can access this information. Therefore, if the SQL Server startup account is not a member of the Local Administrators group, the user cannot store or retrieve the Windows security credentials to log on as the proxy account, and the <b>xp_cmdshell</b> extended stored procedure fails. In order to enable non-sysadmin users to run the <b>xp_cmdshell</b> extended stored procedure, the SQL Server startup account must be a member of the Local Administrators group.<br><br>To configure a proxy account for SQL
+		  Server logins that are not members of the <b>sysadmin</b> fixed server role, use one of the following methods.<div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div><h3 id="tocHeadRef">Method 1: Use SQL Server Enterprise Manager</h3><script type="text/javascript">
+                loadTOCNode(2, 'moreinformation');
+            </script><h4 id="tocHeadRef">Configure the Windows account</h4><script type="text/javascript">
+            loadTOCNode(3, 'moreinformation');
+        </script>To set the Windows account to enable non-sysadmin users to execute
+		  the <b>xp_cmdshell</b> extended stored procedure, follow these steps: 
+		  <ol><li>Start SQL Server Enterprise Manager.</li><li>In SQL Server Enterprise Manager, expand <strong class="uiterm">Microsoft
+				SQL Server</strong>, and then expand <strong class="uiterm">SQL Server
+				Group</strong>.</li><li>Expand the instance of SQL Server that you want to set up
+				the proxy account for.</li><li>Expand <strong class="uiterm">Management</strong>, right-click <strong class="uiterm">SQL
+				Server Agent</strong>, and then click <strong class="uiterm">Properties</strong>.</li><li>In the <strong class="uiterm">SQL Server Agent Properties</strong> dialog
+				box, click the <strong class="uiterm">Job System</strong> tab.</li><li>Under <strong class="uiterm">Non-SysAdmin job step proxy account</strong>,
+				click to clear the <strong class="uiterm">Only users with SysAdmin priviledges can execute
+				CmdExec and ActiveScripting job steps</strong> check box.</li><li>In the <strong class="uiterm">SQL Server Agent proxy account</strong>
+				dialog box, type the Windows account name in the <strong class="uiterm">User name</strong>
+				box.</li><li>In the <strong class="uiterm">Password</strong> box, type the Windows
+				password.</li><li>In the <strong class="uiterm">Domain</strong> box, type the domain that
+				the Windows account is a member of, and then click <strong class="uiterm">OK</strong> two
+				times.</li></ol><h4 id="tocHeadRef">Add a SQL Server login account</h4><script type="text/javascript">
+            loadTOCNode(3, 'moreinformation');
+        </script>To add a SQL Server login account that you want to grant
+		  permissions to execute the <b>xp_cmdshell</b> extended stored procedure, follow these steps: 
+		  <ol><li>In SQL Server Enterpise Manager, expand
+				<strong class="uiterm">Security</strong>.</li><li>In the <strong class="uiterm">Logins</strong> pane, right-click the SQL
+				Server login account that you want to grant permissions to, and then click
+				<strong class="uiterm">Properties</strong>.<br><br><b>Note</b> If the account is not already added, you can create a Windows proxy account as the login account.</li><li>In the <strong class="uiterm">SQL Server Login Properties</strong> dialog
+				box, click the <strong class="uiterm">Database Access</strong> tab.</li><li>In the <strong class="uiterm">Specify which database can be accessed by
+				this login</strong> list, click to select the <strong class="uiterm">Permit</strong> check box
+				for the <strong class="uiterm">master</strong> database, and then click <strong class="uiterm">OK</strong>.
+				</li><li>Expand <strong class="uiterm">Databases</strong>, expand
+				<strong class="uiterm">master</strong>, and then click <strong class="uiterm">Extend Stored
+				Procedures</strong>.</li><li>Locate and then right-click the
+				<strong class="uiterm">xp_cmdshell</strong> extended stored procedure, and then click
+				<strong class="uiterm">Properties</strong>.</li><li>In the <strong class="uiterm">Extended Stored Procedure
+				Properties</strong> dialog box, click <strong class="uiterm">Permissions</strong>.</li><li>Click to select the <strong class="uiterm">EXEC</strong> check box for the
+				SQL Server login account that you want to grant execute permissions to, and
+				then click <strong class="uiterm">OK</strong> two times.</li></ol><div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div><h3 id="tocHeadRef">Method 2: Run a Transact-SQL script</h3><script type="text/javascript">
+                loadTOCNode(2, 'moreinformation');
+            </script>Run the following Transact-SQL script to enable the Windows
+		  account to execute the <b>xp_cmdshell</b> extended stored procedure:<div class="kb_codebody"><div class="kb_codecontent"><code><pre class="code">
+-- Set database to master.
+USE master
+GO
+
+-- Add a valid Windows account as proxy account.
+EXECUTE xp_sqlagent_proxy_account N'SET'
+                        , N'&lt;DomainName&gt;'
+                        , N'&lt;WindowsAccount&gt;'
+                        , N'&lt;WindowsPassword&gt;'
+GO
+-- Get the proxy account to determine whether it is set up correctly. 
+EXECUTE xp_sqlagent_proxy_account N'GET'
+GO
+
+-- Enable non-system administrators to run the job and to execute xp_cmdshell.
+EXECUTE msdb..sp_set_sqlagent_properties @sysadmin_only = 0
+GO
+</pre></code></div></div><b>Note</b> In this script, <var>&lt;DomainName&gt;</var> is
+		  the domain that the Windows account is a member of.
+		  <var>&lt;WindowsAccount&gt;</var> is the Windows account name.
+		  <var>&lt;WindowsPassword&gt;</var> is the password for the
+		  Windows account. <br><br>To add the SQL Server login account that you want to
+		  grant permission to execute the <b>xp_cmdshell</b> extended stored procedure, run the following Transact-SQL script:<div class="kb_codebody"><div class="kb_codecontent"><code><pre class="code">
+USE master
+GO
+
+-- Grant database access to the SQL Server login account that you want to provide access.
+EXEC sp_grantdbaccess '&lt;SQLLogin&gt;'
+GO
+
+-- Grant execute permission on xp_cmdshell to the SQL Server login account.
+GRANT exec ON xp_cmdshell TO &lt;SQLLogin&gt;
+GO</pre></code></div></div><b>Note</b> In this script, <var>&lt;SQLLogin&gt;</var> is
+		  the SQL Server login that you want to grant permission to execute the <b>xp_cmdshell</b> extended stored procedure.<br><br><b>Note</b> The proxy account is the Windows account in whose security
+		  context the SQL Server Agent jobs or command-line commands are run. When you
+		  set up the Windows account for the SQL Server Agent proxy account, you must
+		  give the account the Windows-level "Log on as a batch job" user
+		  right.<div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div></div><h2 class="subTitle" id="tocHeadRef"><span><a href="javascript:void(0);">REFERENCES</a></span><div class="sectionpreview_closed"></div></h2><script type="text/javascript">
+                            loadTOCNode(1, 'references');
+                        </script><div class="sbody">For more information about the <b>xp_cmdshell</b> extended stored procedure, see the "Transact-SQL Reference" topic
+		  in SQL Server Books Online. <br><br>For more information about the SQL Server
+		  Agent proxy account, visit the following Microsoft Developer Network (MSDN) Web
+		  sites:<div class="indent"><b>xp_sqlagent_proxy_account</b><br><a href="http://msdn2.microsoft.com/en-us/library/aa260700(SQL.80).aspx">http://msdn2.microsoft.com/en-us/library/aa260700(SQL.80).aspx</a><span class="pLink">
+            (http://msdn2.microsoft.com/en-us/library/aa260700(SQL.80).aspx)
+        </span><span class="kb_space"></span><br><br><b>xp_cmdshell</b><br><a href="http://msdn2.microsoft.com/en-us/library/aa369561.aspx">http://msdn2.microsoft.com/en-us/library/aa369561.aspx</a><span class="pLink">
+            (http://msdn2.microsoft.com/en-us/library/aa369561.aspx)
+        </span><span class="kb_space"></span><br><br>Setting
+		  up Windows Services Accounts<br><a href="http://msdn2.microsoft.com/en-us/library/aa176564(SQL.80).aspx">http://msdn2.microsoft.com/en-us/library/aa176564(SQL.80).aspx
+		  </a><span class="pLink">
+            (http://msdn2.microsoft.com/en-us/library/aa176564(SQL.80).aspx)
+        </span><span class="kb_space"></span></div>
+
+For more information about how to set appropriate permissions on the
+			 proxy account, click the following article number to view the article in the Microsoft Knowledge Base:
+
+<div class="indent"><a class="KBlink" href="/kb/283811/">283811</a> 
+                            <span class="pLink">
+            (http://support.microsoft.com/kb/283811/
+                        )
+        </span>
+
+ How to change the SQL Server or SQL Server Agent service account without using SQL Enterprise Manager in SQL Server 2000 or SQL Server Configuration Manager in SQL Server 2005
+
+</div><div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div></div></div><div class="sbody norollup"><div class="appliesTo"><hr><a id="appliesto"></a><h5>APPLIES TO</h5><ul><li>Microsoft SQL Server 2000 Standard Edition</li></ul></div><div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div><div class="keywords"><table><tr><td class="header"><h5>Keywords: 
+                            </h5></td><td class="text">kbinfo kbhowto KB890775</td></tr></table></div><div class="topOfPage"><a href="#top"><img src="/library/images/support/kbgraphics/public/en-us/uparrow.gif" alt="">Back to the top</a></div></div><!-- - -KB 3 end- - --></div></div><span class="bookmark"><a id="survey" name="survey">&nbsp;</a></span><div class="wp" id="fmsSurvey" style="display:none;"><div class="fms"><noscript><div class="SURVEYNOSCRIPT"></div></noscript><input type="hidden" id="surveyname" name="surveyname" value=""><input type="hidden" id="showpage" name="showpage" value="1"><div id="SURVEYSECTIONCONTAINER"><div id="SURVEYSECTION_132" class="SURVEYSECTION" style="display:none;" xmlns:sw="urn:schemas-microsoft-com/PSS/PSS_Survey01"><input type="hidden" name="id" value="132"><input type="hidden" name="CompoundingBranchRules" value=""><input type="hidden" name="NextSectionByTopicRef" value="0"><div id="SURVEYQUESTION_9089" class="QUESTIONCONTAINER"><input type="hidden" name="id" value="9089"><input type="hidden" name="type" value="LABEL"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT"><h5>Provide feedback on this information</h5></div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div></div><div id="SURVEYQUESTION_9088" class="QUESTIONCONTAINER"><input type="hidden" name="id" value="9088"><input type="hidden" name="type" value="CHOICE"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT">Did this information solve your problem?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><input type="hidden" name="randomization" value=""><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_90889088" id="14471" value="0"></td><td class="ANSWERTEXT">Yes</td></tr></table></td></tr><tr><td valign="top"><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_90889088" id="14472" value="1"></td><td class="ANSWERTEXT">No</td></tr></table></td></tr><tr><td valign="top"><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_90889088" id="14473" value="2"></td><td class="ANSWERTEXT">I don't know</td></tr></table></td></tr></table></div><div id="SURVEYQUESTION_9086" class="QUESTIONCONTAINER"><input type="hidden" name="id" value="9086"><input type="hidden" name="type" value="CHOICE"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT">Was this information relevant?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><input type="hidden" name="randomization" value=""><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top"><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_90869086" id="14471" value="0"></td><td class="ANSWERTEXT">Yes</td></tr></table></td></tr><tr><td valign="top"><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_90869086" id="14472" value="1"></td><td class="ANSWERTEXT">No</td></tr></table></td></tr></table></div><div id="SURVEYQUESTION_9087" class="QUESTIONCONTAINER"><input type="hidden" name="id" value="9087"><input type="hidden" name="type" value="TEXT-BLOCK"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT">What can we do to improve this information?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><textarea class="ANSWERBOX" name="TEXTBLOCK_9087" rows="6" cols="80" onpaste="enforceMaxLength(this,500,event)" onkeydown="enforceMaxLength(this,500,event)"></textarea></div><div id="SURVEYQUESTION_7813" class="QUESTIONCONTAINER"><input type="hidden" name="id" value="7813"><input type="hidden" name="type" value="LABEL"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT">To protect your privacy, do not include contact information in your feedback.</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div></div><div class="NAVIGATION"><table class="NAVBUTTONCONTAINER"><tr><td class="PADDINGCELL"></td><td class="NAVBUTTONCELL"><input class="NAVBUTTON" type="button" value="Submit" onclick="kbSurvey.next();this.blur();"></td><td class="ENDPADDINGCELL"></td></tr></table></div></div><div ID="DIV_CLOSE" style="display:none" xmlns:sw="urn:schemas-microsoft-com/PSS/PSS_Survey01"><div class="SURVEYTHANKYOUCONTAINER"><div class="SURVEYINTROTEXT">Thank you! Your feedback is used to help us improve our support content. For more assistance options, please visit the <a href="http://support.microsoft.com">Help and Support Home Page</a>.</div></div><div class="NAVIGATION"><table class="NAVBUTTONCONTAINER" nowrap="yes"><tr><td class="PADDINGCELL"></td><td class="NAVBUTTONCELL"></td><td class="ENDPADDINGCELL"></td></tr></table></div></div></div></div></div><script type="text/javascript">
+			var kbSurvey = new MS.Support.Fms.Survey("fmsSurvey");
+			kbSurvey.isKBEmbedded = true;
+			kbSurvey.addSubmitField('REGIONID', 'en-us');
+			kbSurvey.addSubmitField('SITE', 'gn');
+			kbSurvey.addSubmitField('SURVEYSCID', 'sw;en;1496');
+			kbSurvey.addSubmitField('SURVEYID', '1496');
+			kbSurvey.addSubmitField('SURVEYNAME', '');
+			kbSurvey.addSubmitField('BROWSERLANGCODE', '');
+			kbSurvey.addSubmitField('SURVEYLANGCODE', 'en');
+			kbSurvey.addSubmitField('FMSURL', '%252fdefault.aspx%252fkb%252f890775');
+			kbSurvey.parameters = ['kb','en-us','890775','','','','','','',''];
+			kbSurvey.maxKBsInCookie = '10';
+			kbSurvey.kbvisited = '';
+		</script></div></td><td class="primaryThinColumn"><div id="thinColumn" style="float: none;"><div class="wp getHelp"><table align="center" cellpadding="0" cellspacing="0"><tr><td class="image"><a href="/gethelp/default.aspx?content=kb;en-us;890775" id="L_174092"><img alt="" class="gsfx_img_png" src="/library/images/support/en-US/help_icon_48x48.png" /></a></td><td class="text"><h3>Get Help Now</h3><a href="/gethelp/default.aspx?content=kb;en-us;890775" id="L_174092">Contact a support professional by E-mail, Online, or Phone</a></td></tr></table></div><div class="wp articleTrans"><h3><span class="linkCon">Article Translations</span><span class="linkConTop"></span></h3><form name="frmArticleTrans" action="/" onsubmit="return SwitchLanguage(29803);"><div><table cellpadding="0" cellspacing="0"><tr><td><select name="scid"><option value="kb;ar;890775">Arabic</option><option value="kb;cs;890775">Czech</option><option value="kb;fr;890775">French</option><option value="kb;de;890775">German</option><option value="kb;it;890775">Italian</option><option value="kb;ja;890775">Japanese</option><option value="kb;ko;890775">Korean</option><option value="kb;pt-br;890775">Portuguese (Brazil)</option><option value="kb;pt;890775">Portuguese (Portugal)</option><option value="kb;zh-cn;890775">Simplified Chinese</option><option value="kb;es;890775">Spanish</option><option value="kb;zh-tw;890775">Traditional Chinese</option></select></td><td class="spacer">&nbsp;</td><td><input type="image" alt="Translate the article" style="width: 24;height: 24;" onmouseover="this.src='/library/images/support/EN-US/go_right_02-over.gif';" onmouseout="this.src='/library/images/support/en-US/GSSSM_rltlngRelatedlanguages.gif';" src="/library/images/support/en-US/GSSSM_rltlngRelatedlanguages.gif" /><a id="KBLangListRedirect" href="" /></td></tr></table></div></form></div><div id="divRelContent" style="display:none"></div><div id="divRelTags" style="display:none"></div><div class="wp" id="RelatedSupportCenters"><table cellspacing="0" class="LCT"><tr><td class="textColumn"><h3><span class="linkCon">Related Support Centers</span><span class="linkConTop"></span></h3><ul><li><span><a href="/ph/2852/en-us">SQL Server 2000</a></span></li></ul></td></tr></table></div><div class="wp" id="SupportTools"><table cellspacing="0" class="LCT"><tr><td class="textColumn"><h3><span class="linkCon">Page Tools</span><span class="linkConTop"></span></h3><ul><li id="PrintPage_tr"><span><a href="/gp/noscript" id="PrintPage" title="Print this page" onclick="return MS_HandleClick(this,'SupportTools', true);">Print this page</a></span></li><li id="EmailPage_tr"><span><a href="mailto:?subject=How%20to%20enable%20non-sysadmin%20accounts%20to%20execute%20the%20%22xp_cmdshell%22%20extended%20stored%20procedure%20in%20SQL%20Server%202000&amp;body=http%3a%2f%2fsupport.microsoft.com%2fdefault.aspx%2fkb%2f890775" id="EmailPage" title="E-mail this page" onclick="return MS_HandleClick(this,'SupportTools', true);">E-mail this page</a></span></li></ul></td></tr></table></div></div></td></tr></table></div></div><div id="bottomRow"><div class="wp getHelp"><table align="center" cellpadding="0" cellspacing="0"><tr><td class="image"><a href="/gethelp/default.aspx?content=kb;en-us;890775" id="L_174092"><img alt="" class="gsfx_img_png" src="/library/images/support/en-US/help_icon_48x48.png" /></a></td><td class="text"><h3>Get Help Now</h3><a href="/gethelp/default.aspx?content=kb;en-us;890775" id="L_174092">Contact a support professional by E-mail, Online, or Phone</a></td></tr></table></div></div>
+                        
+            </div>
+        </div>
+        
+        <div id="gsfx_brnd_BottomCorners" class="gsfx_brnd_CornerContainer">
+            <div class="gsfx_brnd_TBBorders gsfx_brnd_TransBG" id="gsfx_brnd_BottomBorder"></div>
+            <div class="gsfx_brnd_Corner" id="gsfx_brnd_LLowerCorner"></div>
+        </div>
+        
+        <div id="gsfx_brnd_WidthFix"></div>
+        
+        <div id="gsfx_brnd_FooterContainer">
+            <div id="gsfx_brnd_SiteFooter" class="gsfx_brnd_NetworkLeft">
+                Microsoft Support
+            </div>
+
+            <table id="gsfx_brnd_NetworkFooter" class="gsfx_brnd_NetworkRight"><tr>
+                <td id="gsfx_brnd_FooterLinkContainer">
+                    <!--Table is wrapped in a div tag to facilitate proper alignment and stacking-->
+                    <div class="gsfx_brnd_FooterLinks" id="gsfx_brnd_SiteFooterLinks">
+                        <!--Table is used here in order to properly order the links for LTR and RTL while maintaining the correct tab order-->                        
+                        <table summary="Site Footer Links" class="gsfx_brnd_NetworkRight"><tr><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="javascript:window.open('http://mymfe.microsoft.com/support.microsoft.com/feedback.aspx?formid=24' + '&UrlReferrer='  +  escape(document.referrer.toString()), 'Feedback', 'scrollbars=yes,menubar=no,titlebar=no,location=no,width=500,height=600,resizable=yes');void(0);" id="L_184649"><span>Feedback</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="/gp/csa" id="L_157327"><span>Services Agreement</span></a></td></tr></table>                        
+                    </div>
+                    
+
+                    <!--Table is wrapped in a div tag to facilitate proper alignment and stacking-->
+                    <div class="gsfx_brnd_FooterLinks" id="gsfx_brnd_NetworkFooterLinks">
+                        <!--Table is used here in order to properly order the links for LTR and RTL while maintaining the correct tab order-->
+                        <table summary="Network Footer Links" class="gsfx_brnd_NetworkRight"><tr><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="/contactus/?ws=support" id="L_153553"><span>Contact Us</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://go.microsoft.com/?linkid=4412892" id="L_153554"><span>Terms of Use</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://go.microsoft.com/?linkid=4412893" id="L_153555"><span>Trademarks</span></a></td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_FooterSeperator">|</td><td class="gsfx_brnd_NetworkLinkContainer gsfx_brnd_NetworkLink"><a href="http://go.microsoft.com/?linkid=4412894" id="L_153556"><span>Privacy Statement</span></a></td></tr></table>
+                    </div>
+                </td>
+                <td id="gsfx_brnd_copyright_container">
+                    <div id="gsfx_brnd_MSLogoContainer" >
+                        <!--[if lte IE 6]><div id="gsfx_brnd_legacy_MSLogo"></div><![endif]-->
+                        <img id="gsfx_brnd_MSLogo" alt="Microsoft" src="/library/images/support/cn/gsfx_brnd_ms_logo_sml_blk.png" />
+                        <img id="gsfx_brnd_MSLogoPrint" alt="Microsoft" src="/library/images/support/cn/gsfx_brnd_ms_logo_sml_blk.png" />
+                    </div>
+                    <span id="gsfx_brnd_copyright">&copy;2010 Microsoft</span>
+                </td>
+            </tr></table>
+        </div>
+    </div>
+</div>
+</div>
+<style type="text/css">   
+    #gsfx_brnd_CenterContent, #gsfx_brnd_PageWrapper
+    {
+        background: url('') repeat-x bottom;
+    }    
+</style>
+<script type="text/javascript" src="/common/script/gsfx/branding.js?28"></script><script type="text/javascript" src="/common/script/gsfx/wtInit.js?28"></script><script type="text/javascript" src="/common/script/gsfx/wtCore.js?28"></script><noscript><img alt="" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsxia05c00000s926v0z4tru_3w4l/njs.gif?dcsuri=/nojavascript&WT.js=No" /></noscript><img id="webmetriximg" alt="" src="/library/images/support/cn/onepix.gif" /><noscript><img id="StatsDotNetImgNoScript" alt="" src="http://support.microsoft.com/LTS/default.aspx?SSID=1&#38;SiteLCID=1033&#38;SsVersion=GSS5.0&#38;SiteCulture=en-us&#38;ContentCulture=en-us&#38;In404Url=&#38;EventCollectionID=1&#38;URL=%2fdefault.aspx&#38;ContentType=kb&#38;ContentLCID=1033&#38;ContentID=890775&#38;Platform=unknown&#38;BrandID=1&#38;ContentProperties=6%3d9%7c7%3d3.2%7c9%3dkbAudDeveloper%20%20kbAudITPRO%20%20%20%7c" /></noscript><img id="StatsDotNetImg" name="StatsDotNetImg" alt="" src="/library/images/support/cn/onepix.gif" /><script type="text/javascript">StatsDotNet.disabled=false;StatsDotNet.enableCollTierParams=true;StatsDotNet.host='http\x3a\x2f\x2fsupport.microsoft.com\x2fLTS\x2fdefault.aspx';StatsDotNet.ssId='1';StatsDotNet.siteLcId='1033';StatsDotNet.SiteCulture='en-us';StatsDotNet.SsVersion='GSS5.0';StatsDotNet.url='\x2fdefault.aspx';StatsDotNet.ContentCulture ='en-us';StatsDotNet.contentType='kb';StatsDotNet.contentLn='1033';StatsDotNet.contentId='890775';StatsDotNet.platform='unknown';StatsDotNet.eventCollectionId=1;StatsDotNet.siteBrandId='1';StatsDotNet.onUnloadTimeout=300;StatsDotNet.ltsIdleTimeout=5000;StatsDotNet.userAgentString='wget\x2f1.11.4';StatsDotNet.ContentProperties='6\x3d9\x7c7\x3d3.2\x7c9\x3dkbAudDeveloper  kbAudITPRO   \x7c';</script><script type="text/javascript">var enableSiteSurvey = true;function isDomainTracking(){var entry = MS.Support.Fms.CookieUtil.getCookie('fmshb');if (entry){try{return entry.split(',')[0] == '1' ? true : false;}catch (e){return false;}}return false;};window.setInterval(function(){MS.Support.Fms.CookieUtil.setSessionCookie('fmshb', (isDomainTracking() ? '1' : '0') + ',' + (new Date()).getTime());}, 1000);function fmsLastExp(){var visits = MS.Support.Fms.CookieUtil.getCookie('ST_GN_EN-US');var parts =  visits ? visits.split('_') : [];if (null == visits || parts.length != 3 || isNaN(parts[0])){return 0;}return parseInt(parts[2]);};function fmsSurveyExpired(days){var MiliDay = 86400000;var visits = MS.Support.Fms.CookieUtil.getCookie('ST_GN_EN-US');var parts = visits ? visits.split('_') : [];if (null == visits || parts.length != 3 || isNaN(parts[0])){return true;};var origDate = parseInt(parts[1]);var curDate = new Date();return (curDate.getTime()/MiliDay - days) >= origDate;};function activateSiteSurvey (){if(window.top == window && !isDomainTracking() && typeof(enableSiteSurvey) != "undefined" && enableSiteSurvey && fmsSurveyExpired(fmsLastExp())){document.write('<script language="javascript" src="/library/svy/broker.js"></scr'+'ipt>');}};var triggerEntity = {CookieDef:'ST_GN_EN-US',Site:'gn',Region:'en-us',IsRTL:false,Scid:"sw;en;1699",Xsl:"",Path:"/common/survey.aspx",IdValue: '',EmbedSurveyPrompt: 'nothing',Expiration:90,Delay:0,Frequency:336,SurveyStyle:"popup",DisplayIntroPage:1,EmailStyle:0,EmailSurveyID:"",ReferringURL:'http\x3a\x2f\x2fsupport.microsoft.com\x2fdefault.aspx\x2fkb\x2f890775',Event:"OnUnload",TriggerId:"12243",IntervalType:"session",Redirect:"",OptOut:0,AltStyle: '',RenderOption: '',InvitationWidth: 0,PageWidth: 0,PageHeight: 0,AnimationDuration:0.5,Parameters:['kb','en-us','890775','','','','','','',''],Theme:"gn",Toolbar:"",Contains:"sub-domain",Pages:[],TrackingText:'Thank you for agreeing to participate in the Microsoft online survey.\u00a0 Please look at the support.microsoft.com Web site the way you normally would and then come back and answer the survey questions that will appear in this window.\u00a0 The questions will appear after you leave the web pages for which Microsoft is seeking your feedback.'};new MS.Support.Fms.SurveyTrigger(triggerEntity, typeof config != "undefined" ? config : null);</script><script type="text/javascript">function thisLoad(){makeAjaxCall('LoadRelatedContent','890775\x3ben-us');makeAjaxCall('LoadRelatedTags','890775\x3ben-us');KBFeedBackShowSurvey();CreateSearchOptions('acListWrappergsfx_bsrch_query', 306);SetCatLangPos();InitSrch();InitAC('gsfx_bsrch_query');$(document).ready(function() {gsfx_bsrch_InitCatSelection('gsfx_bsrch_query', '4:');});MS_WebMetrix('http\x3a\x2f\x2fc.microsoft.com\x2ftrans_pixel.asp\x3fTYPE\x3dSSPV\x26SOURCE\x3dSUPPORT\x26GUID\x3d1F4FC18C-F71E-47fb-8FC9-612F8EE59C61\x26URI\x3d\x252fgn\x252fen-us\x252fkb_en-us_890775\x26R\x3d');StatsDotNet.LogPageOnLoad();}function thisUnload(){}</script></body></html>

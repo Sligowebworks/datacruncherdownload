@@ -1,0 +1,150 @@
+
+<!-- 
+SUMMARY:
+form for selecting dimension members for data cruncher download
+
+DEPENDANCIES:
+Function, GetDownloadDBConn() -- connopen.inc
+	returns an ADODB.Connection string to the download files database
+ -->
+
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>Data Analysis</title> 
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+</head>
+<script language="JavaScript" src="/sig/js/cookies.js">
+</script>
+    <LINK REL=stylesheet HREF="/sig/css/dpi_pc.css" TYPE="text/css"><script language="Javascript">
+<!--
+function preloadImages() {
+        if (document.images) {
+        var loadedImages = new Array;
+      for(arg=0;arg<preloadImages.arguments.length;arg++) {
+      loadedImages[arg] = new Image();
+      loadedImages[arg].src = preloadImages.arguments[arg];
+                }
+    }
+ }
+function img_hot (imgName) {
+        if (document.images)
+        {       
+            document [imgName].src = "/sig/images/" + imgName + "_on.gif"
+        }
+}
+function img_cool (imgName) {
+        if (document.images)
+        {       
+            document [imgName].src = "/sig/images/" + imgName + ".gif"
+        }
+}
+//-->
+</script>
+<script language="javascript">
+function popup(file,window) 
+{
+	var winFeatures = 'width=650,height=595,scrollbars=yes,resizable=yes,menubar=yes';
+	var pg = file;
+	win = open(pg,window,winFeatures);
+	if (window.focus) win.focus();
+}
+</script>
+<script language="javascript">
+function VerifiedSubmit(form)
+	{	var ok
+		ok = frmDownloadValidate(form)
+		if (ok)
+		{	form.submit();
+		}
+	}
+function frmDownloadValidate(form)
+	{
+		var i;
+		var Qnumchecked;	/*Questions*/
+		var Ynumchecked;	/*Year*/
+		var Cnumchecked;	/*CESA*/
+		var element
+		var Verified
+		Verified = true
+		Qnumchecked = 0;
+		Ynumchecked = 0;
+		Cnumchecked = 0;
+		for (i = 0; i < form.elements.length; i++)
+		{	element = form.elements[i]
+			if (element.type == 'checkbox' && element.checked)
+			{	if (element.name == 'chkQuests'){Qnumchecked++}
+				if (element.name == 'chkYears'){Ynumchecked++}
+				if (element.name == 'chkCESAs'){Cnumchecked++}
+			}
+		}
+		if (Ynumchecked == 0){alert('You must select at least one Year.'); Verified = false;}
+		if (Cnumchecked == 0){alert('You must select at least one CESA.'); Verified = false;}
+		if (Qnumchecked == 0){alert('You must select at least one question.'); Verified = false;}
+
+		return Verified
+	}
+</script>
+<BODY alink="#0000FF" link="#0000FF" vlink="#0000FF" bgcolor="#FFFFFF">
+                    <!-- start of Body -->
+					<Form name="frmDownload" method="Post" action="int.SelectDataSet.asp">
+					<input name="debug" type="hidden" value="True"><input name="chkYears" type="checkbox" value="1"  DISABLED>All Years<input name="chkYears" type="checkbox" value="2"  >1995-96<input name="chkYears" type="checkbox" value="3"  >1996-97<input name="chkYears" type="checkbox" value="4"  >1997-98<input name="chkYears" type="checkbox" value="5"  >1998-99<input name="chkYears" type="checkbox" value="6"  >1999-00<input name="chkYears" type="checkbox" value="7"  >2000-01<input name="chkYears" type="checkbox" value="8"  >2001-02<input name="chkYears" type="checkbox" value="9"  >2002-03<input name="chkYears" type="checkbox" value="10"  >2003-04
+					<input name="chkCESAs" type="checkbox" value="1" DISABLED>All CESA's<input name="chkCESAs" type="checkbox" value="2"  >1<input name="chkCESAs" type="checkbox" value="3"  >2<input name="chkCESAs" type="checkbox" value="4"  >3<input name="chkCESAs" type="checkbox" value="5"  >4<input name="chkCESAs" type="checkbox" value="6"  >5<input name="chkCESAs" type="checkbox" value="7"  >6<input name="chkCESAs" type="checkbox" value="8"  >7<input name="chkCESAs" type="checkbox" value="9"  >8<input name="chkCESAs" type="checkbox" value="10"  >9<input name="chkCESAs" type="checkbox" value="11"  >10<input name="chkCESAs" type="checkbox" value="12"  >11<input name="chkCESAs" type="checkbox" value="13"  >12
+					<input name="chkQuests" type="checkbox" value="1">All Questions<br>
+<input name="chkQuests" type="checkbox" value="2">How did students perform on the state reading test at grade 3?<br>
+<input name="chkQuests" type="checkbox" value="3">How did students perform on state tests at grades 4, 8, and 10?<br>
+<input name="chkQuests" type="checkbox" value="4">How did performance of all students enrolled compare to continuing students only?<br>
+
+					<br><br>
+					<input type="button" value="Submit" onClick="VerifiedSubmit(frmDownload)">
+					</Form>
+                    <!-- end of Body -->
+                </td>
+            </tr>
+            <FORM NAME="Form1" METHOD="post" ACTION="">
+			<tr bgcolor="#D82058">
+				<td colspan="3">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="middle">
+		<td align="left">
+<select name="section" onchange="a = this.options[this.selectedIndex].value; location=a;">',
+<option value="" selected>Go to:</option>
+<option value="/">DPI Home</option>
+<option value="http://www.dpi.state.wi.us/sig/">WINSS Home</option>
+<option value="http://www.dpi.state.wi.us/sig/assessment">Standards and Assessment</option>
+<option value="http://www.dpi.state.wi.us/sig/assessment/sa1a.html"> --- What are our academic standards?</option>
+<option value="http://www.dpi.state.wi.us/sig/assessment/sa1.html"> --- What are standards of the heart?</option>
+<option value="http://www.dpi.state.wi.us/sig/assessment/success.html"> --- What indicates success in academic standards?</option>
+<option value="http://www.dpi.state.wi.us/sig/assessment/sa4.html"> --- What indicates success in standards of the heart?</option>
+<option value="/data/questions.asp?">Data Analysis</option>
+<option value="/data/performance.asp?"> --- How are students performing academically?</option>
+<option value="/data/offerings.asp?"> --- What programs, staff, and money are available?</option>
+<option value="/data/attendance.asp?"> --- What about attendance and behavior?</option>
+<option value="/data/demographics.asp?"> --- What are student demographics?</option>
+<option value="http://www.dpi.state.wi.us/sig/improvement/">Continuous School Improvement</option>
+<option value="http://www.dpi.state.wi.us/sig/improvement/character.html"> --- What makes a successful school?</option>
+<option value="http://www.dpi.state.wi.us/sig/improvement/process.html"> --- How can we improve?</option>
+<option value="http://www.dpi.state.wi.us/sig/improvement/tools.html"> --- Where can we find planning tools?</option>
+<option value="http://www.dpi.state.wi.us/dpi/winss/tips.html"> --- Who should be involved in improvement?</option>
+<option value="http://www.dpi.state.wi.us/sig/practices">Best Practices</option>
+<option value="http://www.dpi.state.wi.us/sig/practices/vision.html"> --- Vision</option>
+<option value="http://www.dpi.state.wi.us/sig/practices/evidence.html"> --- Evidence of success</option>
+<option value="http://www.dpi.state.wi.us/sig/practices/standards.html"> --- High academic standards</option>
+<option value="http://www.dpi.state.wi.us/sig/practices/family.html"> --- Family, school and community partnerships</option>
+<option value="http://www.dpi.state.wi.us/sig/practices/heart.html"> --- Standards of the heart</option>
+<option value="http://www.dpi.state.wi.us/sig/practices/professional.html"> --- Professional development</option>
+<option value="http://www.dpi.state.wi.us/sig/practices/leadership.html"> --- Leadership</option>
+<option value="http://www.dpi.state.wi.us/dpi/search.html">Site Search</option>
+</select></td>
+		<td align="right"><a href="http://www2.dpi.state.wi.us/sig/feedback/comments/survey_popup.html" target="survey" onclick="manualPopup('http://www2.dpi.state.wi.us/sig/feedback/comments/survey_popup.html','survey');" class="feedback">feedback</A><img src="/sig/images/spacer.gif" width="5" height="1"></td>
+	</tr>
+</table>
+
+
+</td>
+			</tr>
+            </form>
+        </table>
+    </div>
+</body>
+</html>

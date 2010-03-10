@@ -477,3 +477,30 @@ DataCruncherSQL/bu20050208/TruancyDataCrunch20041222b.sql -text
 DataCruncherSQL/v_EnrollFlatRaceSexGradesExSS2.sql -text
 DataCruncherSQL/v_EnrollFlatRaceSexGradesExSS2B.sql -text
 DataCruncherSQL/v_EnrollFlatRaceSexGradesExSS3.sql -text
+Docs/HowTo.DataDownloadThirdPartyDependanciesSetup.txt -text
+Docs/Shortcut[!!-~]to[!!-~]CREATE-scripts.lnk -text
+Docs/TestZipScript.vbs -text
+Docs/narrative.draft.01.rtf -text svneol=unset#unset
+Docs/narrative.rtf -text svneol=unset#unset
+Docs/xp_cmdshell_permissions.html -text
+/TestZipScript.asp -text
+/TestZipScript.vbs -text
+/ZipScript.vbs -text
+/adovbs.inc -text
+/connopen.inc -text
+/frm.SelectDataSet.asp -text
+/frm.SelectDataSet.asp.v1 -text
+/functions.inc -text
+/int.SelectDataSet.asp -text
+old/TestZipScript.vbs -text
+old/dev.asp -text
+old/form.htm -text
+old/form.html -text
+old/formsubmit.asp -text
+old/mzd.dev.asp -text
+old/mzd.dev.createFileName.vbs -text
+old/mzd.dev.createZipFileName.asp -text
+old/mzd.dev.invoke.command.asp -text
+old/test.vbs -text
+old/testCommand.asp -text
+/status.asp -text
