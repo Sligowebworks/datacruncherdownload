@@ -184,10 +184,11 @@ var emod; //the event model
                     <!-- start of Body -->
 					<table cellpadding="0" cellspacing="0" border="0" width="390">
 					<tr valign="middle">
-						<td bgcolor="#cccccc" valign="middle" height="35" colspan="2" class="title"> &nbsp;<font size="+1">Download Options</font></td>
+						<td bgcolor="#cccccc" valign="middle" height="35" colspan="2" class="title"> &nbsp;<font size="+1">Legacy Download Options</font></td>
 					</tr>
 					</table>
 			<BR>
+		Notice: These files are no longer updated and will be removed sometime in 2012. This feature is superseded by the feature described at <a href="http://dpi.wi.gov/sig/data/download.html#statewide" target="_new">http://dpi.wi.gov/sig/data/download.html#statewide</a>.
 					<Form name="frmDownload" method="Post" action="<%= strFormHandlerPage %>">
 					<%
 					If blnDebug Then
@@ -296,7 +297,7 @@ var emod; //the event model
             </tr>
             <FORM NAME="Form1" METHOD="post" ACTION="">
 			<tr bgcolor="#D82058">
-				<td colspan="3"><!--#include virtual="/ssi/bot_nav.inc" --></td>
+				<td colspan="3"><!--# INCLUDE virtual="/ssi/bot_nav.inc" --></td>
 			</tr>
             </form>
         </table>
